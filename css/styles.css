@@ -1,0 +1,39 @@
+body .container-fluid{
+  padding: 0 !important;
+  margin: 0 !important;
+  --bs-gutter-x: 0;
+}
+
+.custom-nav li a {
+  color: #0c345d;
+  font-weight: 700;
+}
+
+.home-text {
+  color: white;
+  
+}
+
+.home-text h1 {
+  font-size: 5rem;
+}
+
+.home-text p {
+  font-size: 2rem;
+  background-color: hsla(195, 73%, 44%, 0.5);
+}
+
+.home-btn a{
+    color: rgb(13, 83, 127);  
+    background-color: whitesmoke; 
+    --bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1.5rem; --bs-btn-font-size: 1.5rem;
+    border: 1px solid rgb(13, 83, 127)
+}
+
+.home-btn a:hover{
+    color: whitesmoke;  
+    background-color: hsla(195, 64%, 55%, 0.5); 
+    --bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1.5rem; --bs-btn-font-size: 1.5rem;
+    border: 1px solid rgb(13, 83, 127);
+}
+
