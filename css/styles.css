@@ -1,3 +1,22 @@
+
+.np-body {
+  background-image: url('/images/national-park.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: center; 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+}
+
+
+.nav-bg {
+  background-color: white;
+
+}
+
 body .container-fluid{
   padding: 0 !important;
   margin: 0 !important;
@@ -44,6 +63,7 @@ body .container-fluid{
 
 .custom-card {
   width: 20rem;
+  border: 1px solid rgb(13, 83, 127)
   
  
 }
