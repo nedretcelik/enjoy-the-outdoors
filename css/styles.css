@@ -1,0 +1,9 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.custom-nav li a{
+    color:#0c345d;
+    font-weight: 700;
+}
