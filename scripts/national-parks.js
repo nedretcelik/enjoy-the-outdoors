@@ -102,7 +102,7 @@ window.onload = function () {
     }
   }
 
-  function nationalParksDetailCard() {
+  function buildNationalParksDetailCard() {
     parksDetailDiv.innerText = "";
 
     for (const park of nationalParksArray) {
@@ -154,5 +154,5 @@ window.onload = function () {
   byTypeRadio.onchange = loadParks;
   viewAllParksOption.onchange = loadParks;
 
-  nationalParksList.onchange = nationalParksDetailCard;
+  nationalParksList.onchange = buildNationalParksDetailCard;
 };
