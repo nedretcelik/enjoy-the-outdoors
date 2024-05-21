@@ -11,19 +11,22 @@ window.onload = function () {
   function loadParks() {
     nationalParksList.innerText = "";
 
-    let newOption = new Option("option");
-    newOption.innerText = "Select";
-
-    nationalParksList.appendChild(newOption);
-
     parksDetailDiv.innerText = "";
 
     if (byLocationRadio.checked) {
+      let newOption = new Option("option");
+      newOption.innerText = "Select Location";
+
+      nationalParksList.appendChild(newOption);
       nationalParksArray.sort();
       for (const park of locationsArray) {
         buildSearchOptionState(park);
       }
     } else if (byTypeRadio.checked) {
+      let newOption = new Option("option");
+      newOption.innerText = "Select Park Type";
+
+      nationalParksList.appendChild(newOption);
       parkTypesArray.sort();
       for (const type of parkTypesArray) {
         buildSearchOptionType(type);
@@ -36,8 +39,7 @@ window.onload = function () {
     stateOption.value = parkData;
     stateOption.innerText = parkData;
 
-
-    nationalParksList.appendChild(stateOption); 
+    nationalParksList.appendChild(stateOption);
   }
 
   function buildSearchOptionType(parkData) {
