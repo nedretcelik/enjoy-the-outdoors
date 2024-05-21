@@ -12,17 +12,23 @@ window.onload = function () {
     nationalParksList.innerText = "";
 
     let newOption = new Option("option");
-    newOption.innerText = "Select";
+    newOption.innerText = "Select Location / Park Type";
 
     nationalParksList.appendChild(newOption);
 
     parksDetailDiv.innerText = "";
 
     if (byLocationRadio.checked) {
+      nationalParksArray.sort((a, b) => a.State.localeCompare(b.State));
+      let tempArr = [];
       for (const park of nationalParksArray) {
-        ListOfState(park);
+        if (tempArr.indexOf(park.State) === -1) {
+          ListOfState(park);
+          tempArr.push(park.State);
+        }
       }
     } else if (byTypeRadio.checked) {
+      parkTypesArray.sort();
       for (const type of parkTypesArray) {
         listOfParkType(type);
       }
@@ -51,7 +57,7 @@ window.onload = function () {
     for (const park of nationalParksArray) {
       if (park.State == nationalParksList.value || park.LocationName.indexOf(nationalParksList.value) != -1) {
         let cardDiv = document.createElement("div");
-        cardDiv.classList.add("card" , "mt-5", "custom-card", "d-flex", "justify-content-center");
+        cardDiv.classList.add("card", "mt-5", "custom-card", "d-flex", "justify-content-center");
         parksDetailDiv.appendChild(cardDiv);
 
         let cardBody = document.createElement("div");
@@ -86,7 +92,6 @@ window.onload = function () {
     }
   }
 
-  
   byLocationRadio.onchange = loadParks;
   byTypeRadio.onchange = loadParks;
 
