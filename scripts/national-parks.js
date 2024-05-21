@@ -87,6 +87,15 @@ window.onload = function () {
         let faxP = document.createElement("p");
         faxP.innerText = `Fax: ${park.Fax}`;
         cardBody.appendChild(faxP);
+
+       if(park.Visit) {
+        let visitLinkP = document.createElement("a");
+        visitLinkP.href = ` ${park.Visit}`;
+        visitLinkP.innerText = `Visit: ${park.Visit}`;
+        cardBody.appendChild(visitLinkP);
+       }
+
+
       }
     }
   }
