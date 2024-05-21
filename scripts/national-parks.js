@@ -12,38 +12,35 @@ window.onload = function () {
     nationalParksList.innerText = "";
 
     let newOption = new Option("option");
-    newOption.innerText = "Select Location / Park Type";
+    newOption.innerText = "Select";
 
     nationalParksList.appendChild(newOption);
 
     parksDetailDiv.innerText = "";
 
     if (byLocationRadio.checked) {
-      nationalParksArray.sort((a, b) => a.State.localeCompare(b.State));
-      let tempArr = [];
-      for (const park of nationalParksArray) {
-        if (tempArr.indexOf(park.State) === -1) {
-          ListOfState(park);
-          tempArr.push(park.State);
-        }
+      nationalParksArray.sort();
+      for (const park of locationsArray) {
+        buildSearchOptionState(park);
       }
     } else if (byTypeRadio.checked) {
       parkTypesArray.sort();
       for (const type of parkTypesArray) {
-        listOfParkType(type);
+        buildSearchOptionType(type);
       }
     }
   }
 
-  function ListOfState(parkData) {
+  function buildSearchOptionState(parkData) {
     let stateOption = new Option("option");
-    stateOption.value = parkData.State;
-    stateOption.innerText = parkData.State;
+    stateOption.value = parkData;
+    stateOption.innerText = parkData;
 
-    nationalParksList.appendChild(stateOption);
+
+    nationalParksList.appendChild(stateOption); 
   }
 
-  function listOfParkType(parkData) {
+  function buildSearchOptionType(parkData) {
     let parkTypeOption = new Option("option");
     parkTypeOption.value = parkData;
     parkTypeOption.innerText = parkData;
