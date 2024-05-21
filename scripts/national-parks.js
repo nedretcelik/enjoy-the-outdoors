@@ -38,8 +38,8 @@ window.onload = function () {
 
     if (viewAllParksOption.checked) {
       nationalParksList.style.display = "none";
-      for (const park of locationsArray) {
-        showAllParks(park)
+      for (const park of nationalParksArray) {
+        showAllParks(park);
       }
     }
   }
@@ -61,50 +61,48 @@ window.onload = function () {
   }
 
   function showAllParks(parkData) {
-    for (const park of nationalParksArray) {
-        let cardDiv = document.createElement("div");
-        cardDiv.classList.add("card", "mt-5", "custom-card", "d-flex", "justify-content-center");
-        parksDetailDiv.appendChild(cardDiv);
+    let cardDiv = document.createElement("div");
+    cardDiv.classList.add("card", "mt-5", "custom-card", "d-flex", "justify-content-center");
+    parksDetailDiv.appendChild(cardDiv);
 
-        let cardBody = document.createElement("div");
-        cardBody.classList.add("card-body");
+    let cardBody = document.createElement("div");
+    cardBody.classList.add("card-body");
 
-        cardDiv.appendChild(cardBody);
+    cardDiv.appendChild(cardBody);
 
-        let locationNameh4 = document.createElement("h4");
-        locationNameh4.innerText = park.LocationName;
-        cardBody.appendChild(locationNameh4);
+    let locationNameh4 = document.createElement("h4");
+    locationNameh4.innerText = parkData.LocationName;
+    cardBody.appendChild(locationNameh4);
 
-        let locationNameh5 = document.createElement("h5");
-        locationNameh5.innerText = "Adress: ";
-        cardBody.appendChild(locationNameh5);
+    let locationNameh5 = document.createElement("h5");
+    locationNameh5.innerText = "Adress: ";
+    cardBody.appendChild(locationNameh5);
 
-        let addressP = document.createElement("p");
-        addressP.innerText = `${park.Address}`;
-        cardBody.appendChild(addressP);
+    let addressP = document.createElement("p");
+    addressP.innerText = `${parkData.Address}`;
+    cardBody.appendChild(addressP);
 
-        let locationP = document.createElement("p");
-        locationP.innerText = `${park.City}, ${park.State} ${park.ZipCode}`;
-        cardBody.appendChild(locationP);
+    let locationP = document.createElement("p");
+    locationP.innerText = `${parkData.City}, ${parkData.State} ${parkData.ZipCode}`;
+    cardBody.appendChild(locationP);
 
-        let phoneP = document.createElement("p");
-        phoneP.innerText = `Phone: ${park.Phone}`;
-        cardBody.appendChild(phoneP);
+    let phoneP = document.createElement("p");
+    phoneP.innerText = `Phone: ${parkData.Phone}`;
+    cardBody.appendChild(phoneP);
 
-        let faxP = document.createElement("p");
-        faxP.innerText = `Fax: ${park.Fax}`;
-        cardBody.appendChild(faxP);
+    let faxP = document.createElement("p");
+    faxP.innerText = `Fax: ${parkData.Fax}`;
+    cardBody.appendChild(faxP);
 
-        if (park.Visit) {
-          let visitLinkP = document.createElement("a");
-          visitLinkP.href = ` ${park.Visit}`;
-          visitLinkP.innerText = `Visit: ${park.Visit}`;
-          cardBody.appendChild(visitLinkP);
-        }
+    if (parkData.Visit) {
+      let visitLinkP = document.createElement("a");
+      visitLinkP.href = ` ${parkData.Visit}`;
+      visitLinkP.innerText = `Visit: ${parkData.Visit}`;
+      cardBody.appendChild(visitLinkP);
     }
   }
 
-  function nationalParksDetailCard() {
+  function buildNationalParksDetailCard() {
     parksDetailDiv.innerText = "";
 
     for (const park of nationalParksArray) {
@@ -156,5 +154,5 @@ window.onload = function () {
   byTypeRadio.onchange = loadParks;
   viewAllParksOption.onchange = loadParks;
 
-  nationalParksList.onchange = nationalParksDetailCard;
+  nationalParksList.onchange = buildNationalParksDetailCard;
 };
