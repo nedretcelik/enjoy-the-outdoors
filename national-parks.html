@@ -33,9 +33,19 @@
       </header>
     </div>
     <main>
-      <div class="container" style="background-color: hsla(195, 83%, 81%, 0.5); width: 35%;">
+      <div class="container" style="background-color: hsla(195, 83%, 81%, 0.5); width: 60%;">
         <div class="d-flex justify-content-center custom-heading-np"><h2>Search</h2></div>
         <div class="container mt-2 d-flex justify-content-center">
+          <div class="form-check form-check-inline text-input">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="viewAllParksOption"
+              value="option1"
+            />
+            <label class="form-check-label" for="viewAllParksOption">View All National Parks</label>
+          </div>
           <div class="form-check form-check-inline text-input">
             <input
               class="form-check-input"
@@ -44,7 +54,7 @@
               id="byLocationRadio"
               value="option1"
             />
-            <label class="form-check-label" for="inlineRabyLocationRadiodio1">By Location</label>
+            <label class="form-check-label" for="byLocationRadio">By Location</label>
           </div>
           <div class="form-check form-check-inline text-input">
             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="byTypeRadio" value="option2" />
@@ -54,7 +64,7 @@
       </div>
       <div class="container d-flex justify-content-center mt-5">
         <select id="nationalParksList" class="form-select" aria-label="Default select example">
-          <option value="">Select Location / Park Type</option>
+          <option value="">Select</option>
         </select>
       </div>
       <div class="container mt-5 mb-5">
