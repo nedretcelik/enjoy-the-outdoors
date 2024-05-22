@@ -1,28 +1,35 @@
-
 .np-body {
-  background-image: url('/images/national-park.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-    background-position: center; 
-    margin: 0;
-    padding: 0;
-    font-family: Helvetica, sans-serif !important;
-
-    
-
-}
-.home-body {
-  background-image: url('/images/home-2.jpg');
-  background-size: cover; 
-  background-repeat: no-repeat; 
+  background-image: url("/images/national-park.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center; 
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif !important;
+}
+
+.mountains-body {
+  background-image: url("/images/main-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif !important;
+}
+
+.home-body {
+  background-image: url("/images/home-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
 }
-
 
 .background::before {
   content: "";
@@ -32,17 +39,17 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-  z-index: 1; }
-  
+  z-index: 1;
+}
+
 .text-p {
   text-shadow: 1px 1px;
 }
 .nav-bg {
   background-color: white;
-
 }
 
-body .container-fluid{
+body .container-fluid {
   padding: 0 !important;
   margin: 0 !important;
   --bs-gutter-x: 0;
@@ -55,7 +62,6 @@ body .container-fluid{
 
 .home-text {
   color: white;
-  
 }
 
 .home-text h1 {
@@ -67,38 +73,38 @@ body .container-fluid{
   background-color: hsla(195, 71%, 61%, 0.5);
 }
 
-.home-btn a{
-    color: rgb(13, 83, 127);  
-    background-color: whitesmoke; 
-    --bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1.5rem; --bs-btn-font-size: 1.5rem;
-    border: 3px solid rgb(13, 83, 127)
+.home-btn a {
+  color: rgb(13, 83, 127);
+  background-color: whitesmoke;
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-font-size: 1.5rem;
+  border: 3px solid rgb(13, 83, 127);
 }
 
-.home-btn a:hover{
-    color: whitesmoke;  
-    background-color: hsla(195, 59%, 74%, 0.5); 
-    --bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1.5rem; --bs-btn-font-size: 1.5rem;
-    border: 3px solid rgb(13, 83, 127);
+.home-btn a:hover {
+  color: whitesmoke;
+  background-color: hsla(195, 59%, 74%, 0.5);
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-font-size: 1.5rem;
+  border: 3px solid rgb(13, 83, 127);
 }
 
-.custom-heading-np{
-    color:  #0c345d;
-    font-family: sans-serif;
+.custom-heading-np {
+  color: #0c345d;
+  font-family: sans-serif;
 }
 
 .custom-card {
   width: 20rem;
-  border: 1px solid rgb(13, 83, 127)
-  
- 
+  border: 1px solid rgb(13, 83, 127);
 }
 
 .text-input {
   font-size: 1.25rem;
   font-weight: 800;
   color: #0c345d;
-   
-
 }
 
 select {
@@ -108,5 +114,3 @@ select {
 #nationalParksList {
   display: "block";
 }
-
-
