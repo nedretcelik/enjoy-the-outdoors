@@ -10,7 +10,7 @@
 }
 
 .mountains-body {
-  background-image: url("/images/main-img.png");
+  background-image: url("/images/mountain1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -31,16 +31,7 @@
   font-family: Arial, sans-serif;
 }
 
-.background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-  z-index: 1;
-}
+
 
 .text-p {
   text-shadow: 1px 1px;
@@ -103,7 +94,6 @@ body .container-fluid {
 }
 
 .custom-card-m {
-  background-color: rgba(255, 255, 255, .9);
   text-align: center;
   width: 25em;
   /* border: 1px solid rgb(13, 83, 127); */
