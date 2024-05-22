@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mountains</title>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body>
+
+  <body class="mountains-body">
+    <div class="container-fluid nav-bg">
+      <header
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+      >
+        <div class="col-md-3 mb-2 mb-md-0">
+          <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <img src="./images/logo.svg" alt="" />
+          </a>
+        </div>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 custom-nav">
+          <li><a href="./index.html" class="nav-link px-2">HOME</a></li>
+          <li><a href="./national-parks.html" class="nav-link px-2">NATIONAL PARKS</a></li>
+          <li><a href="./mountains.html" class="nav-link px-2">MOUNTAINS</a></li>
+        </ul>
+        <div class="col-md-3 text-end"></div>
+      </header>
+    </div>
+
     <main>
-      <h1>Mountains</h1>
+      <div class="container d-flex justify-content-center mt-5">
+        <select id="mountainsList" class="form-select" aria-label="Default select example">
+          <option value="">Select</option>
+        </select>
+      </div>
+      <div class="container mt-5">
+        <div id="mountainDetailsDiv" class="d-flex flex-wrap justify-content-center gap-3">
+          <!-- <div class="card">
+            <div class="card-body">
+              
+              
+            </div>
+          </div> -->
+        </div>
+      </div>
     </main>
     <script src="scripts/mountainData.js"></script>
     <script src="scripts/mountains.js"></script>

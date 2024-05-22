@@ -1,48 +1,46 @@
-
 .np-body {
-  background-image: url('/images/national-park.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-    background-position: center; 
-    margin: 0;
-    padding: 0;
-    font-family: Helvetica, sans-serif !important;
-
-    
-
-}
-.home-body {
-  background-image: url('/images/home-2.jpg');
-  background-size: cover; 
-  background-repeat: no-repeat; 
+  background-image: url("/images/national-park.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center; 
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif !important;
+}
+
+.mountains-body {
+  background-image: url("/images/mountain1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif !important;
+}
+
+.home-body {
+  background-image: url("/images/home-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
 }
 
 
-.background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-  z-index: 1; }
-  
+
 .text-p {
   text-shadow: 1px 1px;
 }
 .nav-bg {
   background-color: white;
-
 }
 
-body .container-fluid{
+body .container-fluid {
   padding: 0 !important;
   margin: 0 !important;
   --bs-gutter-x: 0;
@@ -55,7 +53,6 @@ body .container-fluid{
 
 .home-text {
   color: white;
-  
 }
 
 .home-text h1 {
@@ -67,38 +64,60 @@ body .container-fluid{
   background-color: hsla(195, 71%, 61%, 0.5);
 }
 
-.home-btn a{
-    color: rgb(13, 83, 127);  
-    background-color: whitesmoke; 
-    --bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1.5rem; --bs-btn-font-size: 1.5rem;
-    border: 3px solid rgb(13, 83, 127)
+.home-btn a {
+  color: rgb(13, 83, 127);
+  background-color: whitesmoke;
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-font-size: 1.5rem;
+  border: 3px solid rgb(13, 83, 127);
 }
 
-.home-btn a:hover{
-    color: whitesmoke;  
-    background-color: hsla(195, 59%, 74%, 0.5); 
-    --bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1.5rem; --bs-btn-font-size: 1.5rem;
-    border: 3px solid rgb(13, 83, 127);
+.home-btn a:hover {
+  color: whitesmoke;
+  background-color: hsla(195, 59%, 74%, 0.5);
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-font-size: 1.5rem;
+  border: 3px solid rgb(13, 83, 127);
 }
 
-.custom-heading-np{
-    color:  #0c345d;
-    font-family: sans-serif;
+.custom-heading-np {
+  color: #0c345d;
+  font-family: sans-serif;
 }
 
 .custom-card {
-  width: 20rem;
-  border: 1px solid rgb(13, 83, 127)
   
- 
+  width: 20rem;
+  border: 1px solid rgb(13, 83, 127);
 }
 
+.custom-card-m {
+  text-align: center;
+  width: 25em;
+  /* border: 1px solid rgb(13, 83, 127); */
+}
+.custom-card-m img{
+  
+  border: 1px solid rgb(13, 83, 127);
+  margin: 10px 10px 20px 10px;
+}
+
+.custom-card-m h5  {
+  font-weight: 900;
+  
+  
+}
+.custom-card-m  p {
+  font-weight: 900;
+  
+  
+}
 .text-input {
   font-size: 1.25rem;
   font-weight: 800;
   color: #0c345d;
-   
-
 }
 
 select {
@@ -109,4 +128,6 @@ select {
   display: "block";
 }
 
-
+.cardb-bg {
+  opacity: 75%;
+}
