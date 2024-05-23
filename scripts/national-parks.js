@@ -121,7 +121,7 @@ window.onload = function () {
         cardBody.appendChild(locationNameh4);
 
         let locationNameh5 = document.createElement("h5");
-        locationNameh5.innerText = "Adress: ";
+        locationNameh5.innerText = "Address: ";
         cardBody.appendChild(locationNameh5);
 
         let addressP = document.createElement("p");
@@ -132,13 +132,21 @@ window.onload = function () {
         locationP.innerText = `${park.City}, ${park.State} ${park.ZipCode}`;
         cardBody.appendChild(locationP);
 
-        if (park.Phone !== 0) {
+        if (park.Phone == 0) {
+          let phoneP = document.createElement("p");
+          phoneP.innerText = `Phone: N/A`;
+          cardBody.appendChild(phoneP);
+        } else {
           let phoneP = document.createElement("p");
           phoneP.innerText = `Phone: ${park.Phone}`;
           cardBody.appendChild(phoneP);
         }
 
-        if (park.Fax !== 0) {
+        if (park.Fax == 0) {
+          let faxP = document.createElement("p");
+          faxP.innerText = `Fax: N/A`;
+          cardBody.appendChild(faxP);
+        } else {
           let faxP = document.createElement("p");
           faxP.innerText = `Fax: ${park.Fax}`;
           cardBody.appendChild(faxP);
