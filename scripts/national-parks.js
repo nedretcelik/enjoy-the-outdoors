@@ -144,6 +144,8 @@ window.onload = function () {
           let visitLinkP = document.createElement("a");
           visitLinkP.href = ` ${park.Visit}`;
           visitLinkP.innerText = `Visit: ${park.Visit}`;
+          visitLinkP.target = "_blank"
+
           cardBody.appendChild(visitLinkP);
         }
       }
