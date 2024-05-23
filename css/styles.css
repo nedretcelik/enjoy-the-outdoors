@@ -1,3 +1,7 @@
+* {
+  font-family: Lato;
+}
+
 .np-body {
   background-image: url("/images/national-park.jpg");
   background-size: cover;
@@ -75,6 +79,7 @@ body .container-fluid {
 }
 
 .home-text p {
+  color: #0c345d !important;
   font-size: 2rem;
   background-color: hsla(195, 71%, 61%, 0.5);
 }
@@ -99,7 +104,8 @@ body .container-fluid {
 
 .custom-heading-np {
   color: #0c345d;
-  font-family: sans-serif;
+  font-family: lato;
+  font-weight: 800 !important;
 }
 
 .custom-card {
@@ -157,4 +163,8 @@ select {
   background-color: #30420f;
   border: 1px solid white;
 
+}
+
+h1, h5{
+  color: #0c345d !important;
 }
