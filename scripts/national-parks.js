@@ -132,19 +132,23 @@ window.onload = function () {
         locationP.innerText = `${park.City}, ${park.State} ${park.ZipCode}`;
         cardBody.appendChild(locationP);
 
-        let phoneP = document.createElement("p");
-        phoneP.innerText = `Phone: ${park.Phone}`;
-        cardBody.appendChild(phoneP);
+        if (park.Phone !== 0) {
+          let phoneP = document.createElement("p");
+          phoneP.innerText = `Phone: ${park.Phone}`;
+          cardBody.appendChild(phoneP);
+        }
 
-        let faxP = document.createElement("p");
-        faxP.innerText = `Fax: ${park.Fax}`;
-        cardBody.appendChild(faxP);
+        if (park.Fax !== 0) {
+          let faxP = document.createElement("p");
+          faxP.innerText = `Fax: ${park.Fax}`;
+          cardBody.appendChild(faxP);
+        }
 
         if (park.Visit) {
           let visitLinkP = document.createElement("a");
           visitLinkP.href = ` ${park.Visit}`;
           visitLinkP.innerText = `Visit: ${park.Visit}`;
-          visitLinkP.target = "_blank"
+          visitLinkP.target = "_blank";
 
           cardBody.appendChild(visitLinkP);
         }
