@@ -58,11 +58,11 @@ window.onload = function () {
           console.log(data.results);
 
           let sunriseP = document.createElement("p");
-          sunriseP.innerText = "Sunrise: " + data.results.sunrise;
+          sunriseP.innerText = "Sunrise: " + data.results.sunrise +" UTC";
           cardBody.appendChild(sunriseP);
 
           let sunsetP = document.createElement("p");
-          sunsetP.innerText = "Sunset: " + data.results.sunset;
+          sunsetP.innerText = "Sunset: " + data.results.sunset +" UTC";
           cardBody.appendChild(sunsetP);
 
           /* {sunrise: '9:09:20 AM', sunset: '12:18:05 AM', solar_noon: '4:43:43 PM', day_length: '15:08:45', civil_twilight_begin: '8:36:19 AM', …} */
