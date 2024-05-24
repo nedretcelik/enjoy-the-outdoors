@@ -56,12 +56,21 @@ window.onload = function () {
 
         getSunsetForMountain(mountain.coords.lat, mountain.coords.lng).then((data) => {
           console.log(data.results);
+
+          let sunriseP = document.createElement("p");
+          sunriseP.innerText = "Sunrise: " + data.results.sunrise;
+          cardBody.appendChild(sunriseP);
+
+          let sunsetP = document.createElement("p");
+          sunsetP.innerText = "Sunset: " + data.results.sunset;
+          cardBody.appendChild(sunsetP);
+
+          /* {sunrise: '9:09:20 AM', sunset: '12:18:05 AM', solar_noon: '4:43:43 PM', day_length: '15:08:45', civil_twilight_begin: '8:36:19 AM', …} */
         });
       }
     }
   }
 
-  //function that can "fetch" the sunrise/sunset times
   async function getSunsetForMountain(lat, lng) {
     let response = await fetch(`https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`);
     let data = await response.json();
